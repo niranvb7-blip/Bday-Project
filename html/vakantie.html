@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vakantie</title>
+    <!-- Correct relative paths to CSS -->
+    <link rel="stylesheet" href="../styling/headerstyle.css" />
+    <link rel="stylesheet" href="../styling/gallerystyle.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="logo">
+        <a href="poem.html">Niran</a>
+      </div>
+      <nav class="nav-links">
+        <a href="main.html">Home</a>
+        <a href="voetbal.html">Voetbal</a>
+        <a href="gallery.html">Gallerij</a>
+        <a href="vakantie.html">Vakantie</a>
+      </nav>
+    </header>
+
+    <!-- PHOTOBOOK GALLERY -->
+    <section class="gallery">
+      <div class="photo">
+        <img
+          src="../assets/drankjes/62e27fc7-88a3-486b-9c44-ded1e953a4f3.jpg"
+          alt="Photo 1"
+        />
+      </div>
+      <div class="photo">
+        <img
+          src="../assets/drankjes/79e89615-3584-484b-b695-ac833c1d58f4.jpg"
+          alt="Photo 2"
+        />
+      </div>
+      <div class="photo">
+        <img
+          src="../assets/drankjes/b088690b-41fe-4346-8492-86b97655e0fe.jpg"
+          alt="Photo 3"
+        />
+      </div>
+      <div class="photo">
+        <img
+          src="../assets/drankjes/e62c3475-66ac-4e50-993c-14592151fbe1.jpg"
+          alt="Photo 4"
+        />
+      </div>
+      <div class="photo">
+        <img src="../assets/drankjes/IMG_1563.png" alt="Photo 5" />
+      </div>
+      <div class="photo">
+        <img
+          src="../assets/andere/Afbeelding%20van%20WhatsApp%20op%202025-11-22%20om%2000.33.38_c811e3b8.jpg"
+          alt="Photo 6"
+        />
+      </div>
+      <div class="photo">
+        <img
+          src="../assets/andere/Afbeelding%20van%20WhatsApp%20op%202025-11-22%20om%2000.25.07_5f745437.jpg"
+          alt="Photo 7"
+        />
+      </div>
+      <div class="photo">
+        <img
+          src="../assets/andere/Afbeelding%20van%20WhatsApp%20op%202025-11-22%20om%2000.25.21_374a47e9.jpg"
+          alt="Photo 8"
+        />
+      </div>
+      <div class="photo">
+        <img
+          src="../assets/andere/Afbeelding%20van%20WhatsApp%20op%202025-11-22%20om%2000.32.24_b177d4c9.jpg"
+          alt="Photo 9"
+        />
+      </div>
+      <div class="photo">
+        <img
+          src="../assets/andere/Afbeelding%20van%20WhatsApp%20op%202025-11-22%20om%2000.27.48_2a8182ad.jpg"
+          alt="Photo 10"
+        />
+      </div>
+    </section>
+
+    <!-- LIGHTBOX POPUP -->
+    <div id="lightbox">
+      <img id="lightbox-img" src="#" alt="Expanded Photo" />
+    </div>
+
+    <!-- LIGHTBOX SCRIPT -->
+    <script>
+      const lightbox = document.getElementById("lightbox");
+      const lightboxImg = document.getElementById("lightbox-img");
+
+      document.querySelectorAll(".gallery img").forEach((img) => {
+        img.addEventListener("click", () => {
+          lightboxImg.src = img.src;
+          lightbox.classList.add("active");
+        });
+      });
+
+      lightbox.addEventListener("click", () => {
+        lightbox.classList.remove("active");
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Voetbal</title>
+    <!-- Correct relative paths to CSS -->
+    <link rel="stylesheet" href="../styling/headerstyle.css" />
+    <link rel="stylesheet" href="../styling/gallerystyle.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="logo">
+        <a href="poem.html">Niran</a>
+      </div>
+      <nav class="nav-links">
+        <a href="main.html">Home</a>
+        <a href="voetbal.html">Voetbal</a>
+        <a href="gallery.html">Gallerij</a>
+        <a href="vakantie.html">Vakantie</a>
+      </nav>
+    </header>
+
+    <!-- PHOTOBOOK GALLERY -->
+    <section class="gallery">
+      <div class="photo">
+        <img
+          src="../assets/voetbal/5fe9c851-20f5-4f5d-814a-f34a0f9dca83.jpg"
+          alt="Photo 1"
+        />
+      </div>
+      <div class="photo">
+        <img
+          src="../assets/voetbal/Afbeelding%20van%20WhatsApp%20op%202025-11-22%20om%2000.29.01_7611f8d9.jpg"
+          alt="Photo 2"
+        />
+      </div>
+      <div class="photo">
+        <img src="../assets/voetbal/IMG_1559.png" alt="Photo 3" />
+      </div>
+      <div class="photo">
+        <img src="../assets/voetbal/IMG_1560.png" alt="Photo 4" />
+      </div>
+      <div class="photo">
+        <img src="../assets/voetbal/IMG_1561.png" alt="Photo 5" />
+      </div>
+      <div class="photo">
+        <img src="../assets/voetbal/IMG_1562.png" alt="Photo 6" />
+      </div>
+    </section>
+
+    <!-- LIGHTBOX POPUP -->
+    <div id="lightbox">
+      <img id="lightbox-img" src="#" alt="Expanded Photo" />
+    </div>
+
+    <!-- LIGHTBOX SCRIPT -->
+    <script>
+      const lightbox = document.getElementById("lightbox");
+      const lightboxImg = document.getElementById("lightbox-img");
+
+      document.querySelectorAll(".gallery img").forEach((img) => {
+        img.addEventListener("click", () => {
+          lightboxImg.src = img.src;
+          lightbox.classList.add("active");
+        });
+      });
+
+      lightbox.addEventListener("click", () => {
+        lightbox.classList.remove("active");
+      });
+    </script>
+  </body>
+</html>

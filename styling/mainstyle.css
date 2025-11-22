@@ -1,0 +1,68 @@
+* {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  background-color: #333;
+}
+
+.hero {
+  display: flex;
+  height: 92.5vh;
+  width: 100%;
+  column-gap: 1rem;
+  overflow: hidden;
+}
+
+.panel {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 2rem;
+  font-weight: bold;
+
+  background-size: cover;
+  background-position: center;
+
+  filter: grayscale(100%);
+  transition: filter 0.4s ease, flex 0.4s ease;
+}
+
+.panel:nth-child(1) {
+  background-image: url("../assets/andere/ad092b5b-5b7a-4d78-b7d5-d7c544129068.jpg");
+}
+.panel:nth-child(2) {
+  background-image: url("../assets/andere/Afbeelding%20van%20WhatsApp%20op%202025-11-22%20om%2000.32.52_b27d26a7.jpg");
+}
+.panel:nth-child(3) {
+  background-image: url("../assets/andere/70jaar.png");
+  filter: grayscale(0%);
+  flex: 2;
+}
+.panel:nth-child(4) {
+  background-image: url("../assets/andere/Afbeelding%20van%20WhatsApp%20op%202025-11-22%20om%2000.33.38_c811e3b8.jpg");
+}
+.panel:nth-child(5) {
+  background-image: url("../assets/andere/Afbeelding%20van%20WhatsApp%20op%202025-11-22%20om%2000.32.24_b177d4c9.jpg");
+}
+
+.panel:hover {
+  filter: grayscale(0%);
+  flex: 2;
+  cursor: pointer;
+  scale: 1.05;
+  opacity: 0.9;
+  background-position-y: top;
+}
+
+.panel:nth-child(3):hover {
+  scale: 1.1;
+  background-position-y: 2vh;
+}
+
+.hero .panel {
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+}
